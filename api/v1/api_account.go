@@ -1,5 +1,7 @@
 package v1
 
+import "github.com/bitwormhole/wormhole2020api/api"
+
 type AccountVO struct {
 	BaseVO
 	Account AccountBody
@@ -13,5 +15,5 @@ type AccountBody struct {
 }
 
 type IAccount interface {
-	Demo(param *AccountVO) (*AccountVO, error)
+	Demo(context api.Context, param *AccountVO) (*AccountVO, error)
 }
