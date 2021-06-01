@@ -1,9 +1,9 @@
-package v1
+package sso
 
-import "github.com/bitwormhole/wormhole2020api/api"
+import "github.com/bitwormhole/wormhole2020api/api/v1/base"
 
 type AuthVO struct {
-	BaseVO
+	base.VO
 	Auth AuthBody
 }
 
@@ -17,5 +17,5 @@ type AuthBody struct {
 type IAuth interface {
 
 	// method=POST
-	Login(context api.Context, param *AuthVO) (*AuthVO, error)
+	Login(context base.Context, param *AuthVO) (*AuthVO, error)
 }

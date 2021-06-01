@@ -1,9 +1,9 @@
-package v1
+package sso
 
-import "github.com/bitwormhole/wormhole2020api/api"
+import "github.com/bitwormhole/wormhole2020api/api/v1/base"
 
 type SessionVO struct {
-	BaseVO
+	base.VO
 	Session SessionBody
 }
 
@@ -18,8 +18,8 @@ type SessionBody struct {
 type ISession interface {
 
 	// method=GET
-	GetCurrentSession(context api.Context, param *SessionVO) (*SessionVO, error)
+	GetCurrentSession(context base.Context, param *SessionVO) (*SessionVO, error)
 
 	// method=DELETE
-	Logout(context api.Context, param *SessionVO) (*SessionVO, error)
+	Logout(context base.Context, param *SessionVO) (*SessionVO, error)
 }

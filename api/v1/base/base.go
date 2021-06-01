@@ -1,6 +1,6 @@
-package v1
+package base
 
-type BaseVO struct {
+type VO struct {
 	Error   string
 	Message string
 	Date    string
@@ -12,7 +12,7 @@ type BaseVO struct {
 	Timestamp int64
 }
 
-type BaseDTO struct {
+type DTO struct {
 	Type string
 	ID   string
 }
